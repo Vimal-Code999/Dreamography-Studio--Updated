@@ -1,163 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Dreamography Studio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Cursive font for quotes -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-mQV+9fT3KjYWI1c6KChpOWOAIeycmTSDb03bnw6/zwZ7JpX3pfKkMojzjleRm9VdXiafX7+7A2ye31E2vChCCw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-      WEBSITE UPDATE IN PROGRESS, MORE GALLERIES UPLOADING SOON! UNTIL THEN
-      PLEASE FILL OUT OUR CONTACT FORM TO SEE FULL WEDDING GALLERIES
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Dreamography Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    WEBSITE UPDATE IN PROGRESS, MORE GALLERIES UPLOADING SOON! UNTIL THEN PLEASE FILL OUT OUR CONTACT FORM TO SEE FULL WEDDING GALLERIES
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">Dreamography<span>Studio</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-banner">
+    <h1>Our Portfolio</h1>
+    <p>
+      A collection of love stories, celebrations, portraits, and unforgettable moments captured through our lens.
+    </p>
+  </section>
+
+  <section class="section section-light">
+    <h2 class="section-title">Indian Wedding Portfolio</h2>
+    <p class="section-subtitle">
+      Vibrant storytelling that honors tradition, family, rituals, and the joyful beauty of Indian wedding celebrations.
+    </p>
+
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="bride.jpg" alt="Indian bride portrait" />
+        <div class="caption">
+          <h4>Bridal Portrait</h4>
+          <p>Elegant bridal detail captured with timeless beauty and emotion.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="hands.jpg" alt="Bride and groom holding hands" />
+        <div class="caption">
+          <h4>Together Forever</h4>
+          <p>A beautiful close-up moment full of connection, tradition, and love.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="mehndi.jpg" alt="Bridal mehndi hands" />
+        <div class="caption">
+          <h4>Mehndi Details</h4>
+          <p>Intricate henna art and bridal details that deserve to be remembered forever.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="saree.jpg" alt="Portrait in saree outdoors" />
+        <div class="caption">
+          <h4>Traditional Portraits</h4>
+          <p>Graceful portraits that celebrate heritage, elegance, and personality.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="couple.jpg" alt="Indian couple ceremony moment" />
+        <div class="caption">
+          <h4>Couple Celebration</h4>
+          <p>Joyful moments filled with laughter, celebration, and unforgettable memories.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="container">
-        <a href="index.html" class="logo">Dreamography<span class="accent">Studio</span></a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
-        </label>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+  <section class="section section-soft">
+    <h2 class="section-title">What We Love Capturing</h2>
+    <div class="features-grid">
+      <div class="card feature-card">
+        <h3>Candid Emotions</h3>
+        <p>Real smiles, quiet tears, laughter, and every meaningful in-between moment.</p>
       </div>
-    </nav>
 
-    <header class="page-header">
-      <div class="container">
-        <h1>Portfolio</h1>
-        <p>Explore some of our favorite moments captured for our clients.</p>
+      <div class="card feature-card">
+        <h3>Traditional Details</h3>
+        <p>Jewelry, mehndi, attire, florals, rituals, and all the details that tell your story.</p>
       </div>
-    </header>
 
-    <!-- Quote Section -->
-    <section class="quote-section">
-      <div class="container">
-        <blockquote>
-          “Photography is the story I fail to put into words.”
-        </blockquote>
-        <cite>– Destin Sparks</cite>
+      <div class="card feature-card">
+        <h3>Family Moments</h3>
+        <p>Beautiful interactions with loved ones that make each celebration unforgettable.</p>
       </div>
-    </section>
 
-    <!-- Updated gallery sections to showcase all service categories with curated Pexels images -->
-    <section class="gallery-section">
-      <div class="container">
-        <h2>Pre‑Wedding &amp; Engagement</h2>
-        <div class="gallery">
-          <img src="https://images.pexels.com/photos/2959197/pexels-photo-2959197.jpeg" alt="Pre-Wedding photo" />
-          <img src="https://images.pexels.com/photos/2959197/pexels-photo-2959197.jpeg" alt="Pre-Wedding photo" />
-          <img src="https://images.pexels.com/photos/2959197/pexels-photo-2959197.jpeg" alt="Pre-Wedding photo" />
-          <img src="https://images.pexels.com/photos/2959197/pexels-photo-2959197.jpeg" alt="Pre-Wedding photo" />
-        </div>
+      <div class="card feature-card">
+        <h3>Timeless Portraits</h3>
+        <p>Elegant portraits that feel natural, flattering, and filled with personality.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="gallery-section">
-      <div class="container">
-        <h2>Weddings</h2>
-        <div class="gallery">
-          <img src="https://images.pexels.com/photos/3292695/pexels-photo-3292695.jpeg" alt="Wedding photo" />
-          <img src="https://images.pexels.com/photos/3292695/pexels-photo-3292695.jpeg" alt="Wedding photo" />
-          <img src="https://images.pexels.com/photos/3292695/pexels-photo-3292695.jpeg" alt="Wedding photo" />
-          <img src="https://images.pexels.com/photos/3292695/pexels-photo-3292695.jpeg" alt="Wedding photo" />
-        </div>
-      </div>
-    </section>
+  <section class="cta-section">
+    <h2>Want To See More Wedding Work?</h2>
+    <p>
+      We are currently updating our website with more galleries. Reach out through our contact page to view full wedding collections and availability.
+    </p>
+    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+  </section>
 
-    <section class="gallery-section">
-      <div class="container">
-        <h2>Birthday Parties</h2>
-        <div class="gallery">
-          <img src="https://images.pexels.com/photos/7600420/pexels-photo-7600420.jpeg" alt="Birthday photo" />
-          <img src="https://images.pexels.com/photos/7600420/pexels-photo-7600420.jpeg" alt="Birthday photo" />
-          <img src="https://images.pexels.com/photos/7600420/pexels-photo-7600420.jpeg" alt="Birthday photo" />
-          <img src="https://images.pexels.com/photos/7600420/pexels-photo-7600420.jpeg" alt="Birthday photo" />
-        </div>
-      </div>
-    </section>
+  <footer class="footer">
+    <p>© 2026 Dreamography Studio. All rights reserved.</p>
+    <p class="small-note">
+      Wedding, portrait, and event photography with a timeless storytelling style across Ontario.
+    </p>
+  </footer>
 
-    <section class="gallery-section">
-      <div class="container">
-        <h2>Portraits</h2>
-        <div class="gallery">
-          <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Portrait photo" />
-          <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Portrait photo" />
-          <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Portrait photo" />
-          <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Portrait photo" />
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery-section">
-      <div class="container">
-        <h2>Videography</h2>
-        <div class="gallery">
-          <img src="https://images.pexels.com/photos/2820639/pexels-photo-2820639.jpeg" alt="Videography photo" />
-          <img src="https://images.pexels.com/photos/2820639/pexels-photo-2820639.jpeg" alt="Videography photo" />
-          <img src="https://images.pexels.com/photos/2820639/pexels-photo-2820639.jpeg" alt="Videography photo" />
-          <img src="https://images.pexels.com/photos/2820639/pexels-photo-2820639.jpeg" alt="Videography photo" />
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery-section">
-      <div class="container">
-        <h2>Indian Weddings</h2>
-        <div class="gallery">
-          <img src="https://images.pexels.com/photos/1229414/pexels-photo-1229414.jpeg" alt="Indian Wedding photo" />
-          <img src="https://images.pexels.com/photos/1229414/pexels-photo-1229414.jpeg" alt="Indian Wedding photo" />
-          <img src="https://images.pexels.com/photos/1229414/pexels-photo-1229414.jpeg" alt="Indian Wedding photo" />
-          <img src="https://images.pexels.com/photos/1229414/pexels-photo-1229414.jpeg" alt="Indian Wedding photo" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-content">
-        <p>&copy; 2026 Dreamography Studio. All rights reserved.</p>
-        <div class="socials">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener"
-            aria-label="Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="tel:+1234567890" aria-label="Phone"
-            ><i class="fas fa-phone"></i
-          ></a>
-          <a href="mailto:info@dreamographystudio.com" aria-label="Email"
-            ><i class="fas fa-envelope"></i
-          ></a>
-        </div>
-      </div>
-    </footer>
-  </body>
+</body>
 </html>
