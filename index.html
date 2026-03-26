@@ -1,207 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dreamography Studio</title>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Cursive font for quotes -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-mQV+9fT3KjYWI1c6KChpOWOAIeycmTSDb03bnw6/zwZ7JpX3pfKkMojzjleRm9VdXiafX7+7A2ye31E2vChCCw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-      WEBSITE UPDATE IN PROGRESS, MORE GALLERIES UPLOADING SOON! UNTIL THEN
-      PLEASE FILL OUT OUR CONTACT FORM TO SEE FULL WEDDING GALLERIES
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreamography Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="container">
-        <a href="index.html" class="logo">Dreamography<span class="accent">Studio</span></a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
-        </label>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+  <div class="top-bar">
+    WEBSITE UPDATE IN PROGRESS, MORE GALLERIES UPLOADING SOON! UNTIL THEN PLEASE FILL OUT OUR CONTACT FORM TO SEE FULL WEDDING GALLERIES
+  </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1>Capturing Your Moments Into Timeless Memories</h1>
-        <p>
-          We specialize in weddings, portraits and events across Ontario. Let us
-          tell your story through our lens.
-        </p>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Dreamography<span>Studio</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Capturing Love, Joy & Every Beautiful Detail</h1>
+      <p>
+        At Dreamography Studio, we turn meaningful moments into timeless memories.
+        From weddings and engagements to portraits and special events, we capture
+        every smile, emotion, and detail with a warm, elegant, and storytelling style.
+      </p>
+      <div class="hero-buttons">
         <a href="portfolio.html" class="btn btn-primary">View Portfolio</a>
+        <a href="contact.html" class="btn btn-outline">Book Your Date</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Quote Section -->
-    <section class="quote-section">
-      <div class="container">
-        <blockquote>
-          “There is one thing the photograph must contain, the humanity of the
-          moment.”
-        </blockquote>
-        <cite>– Ansel Adams</cite>
-      </div>
-    </section>
+  <section class="section section-light">
+    <h2 class="section-title">Our Photography Services</h2>
+    <p class="section-subtitle">
+      We offer professional photography and videography services designed to preserve
+      your most important memories with creativity, care, and attention to detail.
+    </p>
 
-    <!-- Services Preview Section -->
-    <section class="services">
-      <div class="container">
-        <h2>What We Offer</h2>
-        <!-- Updated service cards to showcase the full range of offerings with curated Pexels images.
-             Each card now links to the pricing page and features a unique photo representing the service. -->
-        <div class="cards">
-          <!-- Pre‑Wedding & Engagement -->
-          <div class="card">
-            <img
-              src="https://images.pexels.com/photos/2959197/pexels-photo-2959197.jpeg"
-              alt="Pre-Wedding & Engagement"
-            />
-            <h3>Pre‑Wedding &amp; Engagement</h3>
-            <p>
-              Romantic sessions that celebrate your love story before the big day.
-            </p>
-            <a href="pricing.html" class="btn btn-secondary">Learn More</a>
-          </div>
-
-          <!-- Weddings -->
-          <div class="card">
-            <img
-              src="https://images.pexels.com/photos/3292695/pexels-photo-3292695.jpeg"
-              alt="Wedding Photography"
-            />
-            <h3>Weddings</h3>
-            <p>
-              Beautiful and candid photography to capture the magic of your
-              special day.
-            </p>
-            <a href="pricing.html" class="btn btn-secondary">Learn More</a>
-          </div>
-
-          <!-- Birthday Parties -->
-          <div class="card">
-            <img
-              src="https://images.pexels.com/photos/7600420/pexels-photo-7600420.jpeg"
-              alt="Birthday Party Photography"
-            />
-            <h3>Birthday Parties</h3>
-            <p>
-              Intimate celebrations photographed with warmth and personality.
-            </p>
-            <a href="pricing.html" class="btn btn-secondary">Learn More</a>
-          </div>
-
-          <!-- Portraits -->
-          <div class="card">
-            <img
-              src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
-              alt="Portrait Photography"
-            />
-            <h3>Portraits</h3>
-            <p>
-              Personalized portrait sessions highlighting your unique style and spirit.
-            </p>
-            <a href="pricing.html" class="btn btn-secondary">Learn More</a>
-          </div>
-
-          <!-- Videography -->
-          <div class="card">
-            <img
-              src="https://images.pexels.com/photos/2820639/pexels-photo-2820639.jpeg"
-              alt="Videography"
-            />
-            <h3>Videography</h3>
-            <p>
-              Cinematic films that preserve your moments in motion.
-            </p>
-            <a href="pricing.html" class="btn btn-secondary">Learn More</a>
-          </div>
-
-          <!-- Indian Weddings -->
-          <div class="card">
-            <img
-              src="https://images.pexels.com/photos/1229414/pexels-photo-1229414.jpeg"
-              alt="Indian Wedding Photography"
-            />
-            <h3>Indian Weddings</h3>
-            <p>
-              Vibrant coverage that honors rich cultural traditions and joyous rituals.
-            </p>
-            <a href="pricing.html" class="btn btn-secondary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta">
-      <div class="container">
-        <h2>Ready to Book Your Session?</h2>
+    <div class="services-grid">
+      <div class="card">
+        <h3>Portrait Photography</h3>
         <p>
-          Get in touch to plan your dream shoot. We can't wait to work with
-          you!
+          Beautiful portrait sessions for individuals, couples, families, and personal
+          branding. We create natural, timeless images that reflect your personality and style.
         </p>
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-content">
-        <p>&copy; 2026 Dreamography Studio. All rights reserved.</p>
-        <div class="socials">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener"
-            aria-label="Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a
-            href="tel:+1234567890"
-            aria-label="Phone"
-          >
-            <i class="fas fa-phone"></i>
-          </a>
-          <a
-            href="mailto:info@dreamographystudio.com"
-            aria-label="Email"
-          >
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
+      <div class="card">
+        <h3>Wedding Photography</h3>
+        <p>
+          From intimate ceremonies to full wedding celebrations, we capture every emotional
+          moment, beautiful detail, and unforgettable memory of your big day.
+        </p>
       </div>
-    </footer>
-  </body>
+
+      <div class="card">
+        <h3>Indian Wedding Photography</h3>
+        <p>
+          We specialize in vibrant, culturally rich Indian wedding celebrations, capturing
+          traditions, rituals, family moments, and joyful festivities with elegance and authenticity.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Event Photography</h3>
+        <p>
+          From birthdays and private parties to cultural and community events, we document
+          every special occasion with candid and professional coverage.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Videography</h3>
+        <p>
+          Relive your favorite moments through cinematic video coverage that captures the
+          energy, emotion, and beauty of your event from start to finish.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="quote-box">
+      “There is one thing the photograph must contain, the humanity of the moment.”
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <h2 class="section-title">Why Choose Dreamography Studio?</h2>
+    <p class="section-subtitle">
+      We focus on creating an experience that feels comfortable, personal, and memorable from beginning to end.
+    </p>
+
+    <div class="features-grid">
+      <div class="card feature-card">
+        <h3>Timeless Style</h3>
+        <p>Warm, natural, and elegant photography that never goes out of style.</p>
+      </div>
+
+      <div class="card feature-card">
+        <h3>Comfortable Experience</h3>
+        <p>Guided posing and a relaxed process so you feel confident in front of the camera.</p>
+      </div>
+
+      <div class="card feature-card">
+        <h3>Detail Focused</h3>
+        <p>From jewelry and decor to candid emotions, we capture every meaningful detail.</p>
+      </div>
+
+      <div class="card feature-card">
+        <h3>Ontario Service Area</h3>
+        <p>Proudly serving weddings, portraits, and events across Ontario.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <h2 class="section-title">Kind Words From Our Clients</h2>
+    <p class="section-subtitle">
+      A few sweet words from couples and clients who trusted us with their most special moments.
+    </p>
+
+    <div class="testimonial-grid">
+      <div class="card">
+        <p>
+          Dreamography Studio captured our special day so beautifully. Every photo felt natural,
+          emotional, and timeless. We could not have asked for a better experience.
+        </p>
+      </div>
+
+      <div class="card">
+        <p>
+          They made us feel so comfortable during our shoot, and the final photos were absolutely stunning.
+          Highly recommended for anyone looking for quality and professionalism.
+        </p>
+      </div>
+
+      <div class="card">
+        <p>
+          Their attention to detail and ability to capture candid moments was amazing.
+          Our family loved every single photo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Let’s Capture Something Beautiful Together</h2>
+    <p>
+      Whether you are planning a wedding, engagement, portrait session, or special event,
+      we would love to be part of your story.
+    </p>
+    <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Dreamography Studio. All rights reserved.</p>
+    <p class="small-note">
+      Wedding, portrait, and event photography with a timeless storytelling style across Ontario.
+    </p>
+  </footer>
+
+</body>
 </html>
