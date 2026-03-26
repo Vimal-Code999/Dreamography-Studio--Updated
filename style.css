@@ -1,620 +1,430 @@
-/*
- * Dreamography Studio Website Styles
- *
- * This stylesheet defines the core look and feel for the Dreamography Studio
- * website. It combines a modern, minimal aesthetic with luxurious touches
- * like gold accents and clean typography. The design is responsive and
- * mobile-friendly.
- */
-
-/* Global resets and base typography */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
   line-height: 1.6;
-  color: #333;
-  background-color: #f5f5f5;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
 }
 
 img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
 
-/* Utility container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Navbar */
-/*
- * Navbar styling has been updated to mirror the clean, airy aesthetic of our
- * inspiration website (Vision Infinie).  The bar is now white with dark
- * typography and a subtle shadow.  This makes the site feel less heavy
- * while still allowing the gold accents to stand out.  The navigation
- * remains sticky to the top of the viewport so users can access other pages
- * at any time.
- */
+.top-bar {
+  background: #f8f1ea;
+  color: #5c4033;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .navbar {
-  background-color: #fff;
-  color: #333;
+  background: #fff;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.navbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: 700;
-  color: #333;
+  color: #222;
 }
 
-.accent {
-  color: #d4af37;
+.logo span {
+  color: #d4a017;
 }
 
-/* Nav menu */
-.nav-menu {
+.nav-links {
+  list-style: none;
   display: flex;
-  gap: 2rem;
-  align-items: center;
+  gap: 26px;
 }
 
-/* Navigation links: dark by default, gold on hover/active to match the
- * overall aesthetic.  Active link states remain highlighted for context.
- */
-.nav-menu li a {
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
+.nav-links a {
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.nav-menu li a:hover,
-.nav-menu li a.active {
-  color: #d4af37;
+.nav-links a:hover,
+.nav-links a.active {
+  color: #d4a017;
 }
 
-/* Mobile nav toggle */
-.nav-toggle {
-  display: none;
-}
-
-.nav-toggle-label {
-  display: none;
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-  position: relative;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  background: #333;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  transition: all 0.3s;
-  border-radius: 2px;
-}
-
-.nav-toggle-label span {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.nav-toggle-label span::before {
-  content: '';
-  top: -10px;
-}
-
-.nav-toggle-label span::after {
-  content: '';
-  top: 10px;
-}
-
-/* Transform hamburger to X when checked */
-.nav-toggle:checked + .nav-toggle-label span {
-  background: transparent;
-}
-
-.nav-toggle:checked + .nav-toggle-label span::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-.nav-toggle:checked + .nav-toggle-label span::after {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-/* Responsive navigation */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-  .nav-toggle-label {
-    display: block;
-  }
-  .nav-menu {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background-color: #fff;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-  }
-  .nav-menu li {
-    margin: 1rem 0;
-    text-align: center;
-  }
-  .nav-toggle:checked ~ .nav-menu {
-    max-height: 300px;
-  }
-
-/* Announcement bar displayed above the navigation.  Inspired by our friend's
- * site, this bar is light grey with a muted font.  It can be used to
- * communicate updates or important notices to visitors.  The small font
- * size keeps it unobtrusive while still being readable.
- */
-.announcement-bar {
-  background-color: #f5f5f5;
-  color: #555;
-  text-align: center;
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
-}
-}
-
-/* Hero Section */
 .hero {
-  /* Updated hero background to a striking black‑and‑white photo of a couple under sparklers from Pexels.
-     This remote image gives the homepage an elegant, cinematic feel that aligns with the brand’s premium look. */
-  background: url('https://images.pexels.com/photos/1646730/pexels-photo-1646730.jpeg') center/cover no-repeat;
-  min-height: 80vh;
-  position: relative;
-  color: #fff;
+  height: 88vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.5)),
+    url("portrait.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Slightly lighter overlay to allow more of the background image to show
-   * through.  This echoes the airy feel of our inspiration site. */
-  background: rgba(0, 0, 0, 0.35);
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
 }
 
 .hero-content {
-  position: relative;
-  max-width: 700px;
-  text-align: center;
-  margin: 0 auto;
-  z-index: 1;
-  padding: 0 1rem;
+  max-width: 850px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  font-size: 54px;
+  line-height: 1.15;
+  margin-bottom: 18px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 14px 28px;
   border-radius: 30px;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: background 0.3s, color 0.3s;
+  font-weight: 700;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background-color: #d4af37;
-  color: #000;
+  background: #d4a017;
+  color: #111;
 }
 
 .btn-primary:hover {
-  background-color: #b59029;
+  background: #b98b10;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
   color: #fff;
 }
 
-.btn-secondary {
-  background-color: #000;
-  color: #fff;
-  border: 2px solid #d4af37;
+.btn-outline:hover {
+  background: #fff;
+  color: #111;
 }
 
-.btn-secondary:hover {
-  background-color: #d4af37;
-  color: #000;
+.section {
+  padding: 70px 8%;
 }
 
-/* Services Section */
-.services {
-  padding: 4rem 0;
-  background-color: #fff;
+.section-light {
+  background: #fff;
 }
 
-.services h2 {
+.section-soft {
+  background: #faf7f3;
+}
+
+.section-title {
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  margin-bottom: 14px;
+  font-size: 38px;
+  color: #222;
 }
 
-.cards {
+.section-subtitle {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 45px;
+  color: #666;
+  font-size: 17px;
+}
+
+.services-grid,
+.features-grid,
+.pricing-grid,
+.gallery-grid,
+.testimonial-grid,
+.contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 28px;
+}
+
+.services-grid,
+.features-grid,
+.pricing-grid,
+.testimonial-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.contact-grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
 }
 
 .card {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
 .card h3 {
-  margin: 1rem;
-  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-size: 22px;
+  color: #222;
 }
 
-.card p {
-  flex-grow: 1;
-  margin: 0 1rem 1rem;
-  font-size: 0.9rem;
-}
-
-.card .btn {
-  margin: 0 1rem 1.5rem;
-  align-self: flex-start;
-}
-
-/* Call to Action */
-.cta {
-  background-color: #d4af37;
-  color: #000;
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.cta h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.cta p {
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-}
-
-/* Footer */
-.footer {
-  background-color: #000;
-  color: #fff;
-  padding: 2rem 1rem;
-}
-
-/* Quote Section
- * Inspired by the Vision Infinie website, this section features a large
- * quotation in a cursive script with plenty of whitespace.  It serves as
- * a pause between major sections and reinforces the artistry of
- * photography.  The font is loaded via Google Fonts (Caveat) in the
- * HTML documents.
- */
-.quote-section {
-  padding: 3rem 1rem;
-  background-color: #fff;
-  text-align: center;
-}
-
-.quote-section blockquote {
-  font-family: 'Caveat', cursive;
-  font-size: 2rem;
-  font-weight: 400;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.quote-section cite {
-  display: block;
-  font-size: 0.9rem;
-  color: #777;
-  font-style: normal;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-}
-
-.footer .socials a {
-  margin: 0 0.5rem;
-  font-size: 1.2rem;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.footer .socials a:hover {
-  color: #d4af37;
-}
-
-/* Page Headers */
-.page-header {
-  background-color: #f9f9f9;
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-.page-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.page-header p {
-  font-size: 1.1rem;
+.card p,
+.card li {
   color: #666;
 }
 
-/* Gallery Sections */
-.gallery-section {
-  padding: 3rem 0;
-}
-
-.gallery-section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  color: #333;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.gallery img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-/* Pricing Section */
-.pricing-section {
-  padding: 4rem 0;
-  background-color: #fff;
-}
-
-.pricing-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.pricing-card {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  padding: 2rem;
+.feature-card {
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.pricing-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.pricing-card .price {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #d4af37;
-  margin-bottom: 1rem;
-}
-
-.pricing-card .price span {
-  font-size: 1.2rem;
-  color: inherit;
-}
-
-.pricing-card ul {
-  text-align: left;
-  margin: 1rem 0 2rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.pricing-card ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* About Section */
-.about-section {
-  padding: 4rem 0;
-  background-color: #fff;
+.quote-box {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  font-style: italic;
+  color: #5c4033;
+  font-size: 28px;
+  line-height: 1.5;
 }
 
 .about-content {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.about-text {
-  flex: 1;
-  min-width: 280px;
+.about-content p {
+  margin-bottom: 18px;
+  color: #555;
+  font-size: 17px;
 }
 
-.about-text h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  color: #333;
+.about-list {
+  margin-top: 24px;
+  padding-left: 20px;
 }
 
-.about-text p {
-  margin-bottom: 1rem;
+.about-list li {
+  margin-bottom: 12px;
   color: #555;
 }
 
-.about-image {
-  flex: 1;
-  min-width: 280px;
+.gallery-card {
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  background: #fff;
 }
 
-.about-image img {
+.gallery-card img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  height: 320px;
+  object-fit: cover;
 }
 
-/* Contact Section */
-.contact-section {
-  padding: 4rem 0;
-  background-color: #f9f9f9;
+.gallery-card .caption {
+  padding: 16px 18px;
 }
 
-.contact-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
+.gallery-card h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
-.contact-info {
-  flex: 1;
-  min-width: 280px;
+.gallery-card p {
+  color: #666;
+  font-size: 14px;
 }
 
-.contact-info h2 {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  color: #333;
+.price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #d4a017;
+  margin-bottom: 14px;
 }
 
-.contact-info ul li {
-  margin-bottom: 0.5rem;
+.price-list {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.price-list li {
+  margin-bottom: 10px;
   color: #555;
-  font-size: 1rem;
 }
 
-.contact-info i {
-  color: #d4af37;
-  margin-right: 0.5rem;
+.contact-info h3,
+.contact-form h3 {
+  margin-bottom: 16px;
+  font-size: 28px;
 }
 
-.contact-form-wrapper {
-  flex: 1;
-  min-width: 280px;
+.contact-info p {
+  margin-bottom: 14px;
+  color: #555;
 }
 
-.contact-form .form-group {
-  margin-bottom: 1rem;
+.contact-info strong {
+  color: #222;
 }
 
-.contact-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #333;
-  font-weight: 500;
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #d4a017;
 }
 
 .contact-form textarea {
+  min-height: 140px;
   resize: vertical;
 }
 
-.note {
-  font-size: 0.8rem;
-  color: #999;
-  margin-top: 0.5rem;
+.cta-section {
+  text-align: center;
+  padding: 80px 8%;
+  background: linear-gradient(135deg, #1c1c1c, #3a2d22);
+  color: #fff;
 }
 
-@media (max-width: 768px) {
+.cta-section h2 {
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.cta-section p {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  color: #eee;
+}
+
+.footer {
+  background: #111;
+  color: #eee;
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.footer p {
+  margin-bottom: 8px;
+}
+
+.small-note {
+  font-size: 14px;
+  color: #999;
+}
+
+.page-banner {
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url("portrait.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.page-banner h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.page-banner p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero h1 {
-    font-size: 2rem;
+    font-size: 40px;
   }
+
   .hero p {
-    font-size: 1rem;
+    font-size: 18px;
   }
-  .pricing-card {
-    padding: 1.5rem;
+
+  .page-banner h1 {
+    font-size: 36px;
   }
-  .pricing-card .price {
-    font-size: 1.8rem;
-  }
-  .about-content {
+}
+
+@media (max-width: 700px) {
+  .navbar {
     flex-direction: column;
+    gap: 14px;
   }
-  .about-image,
-  .about-text {
-    width: 100%;
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
   }
-  .contact-content {
-    flex-direction: column;
+
+  .hero {
+    height: auto;
+    min-height: 75vh;
+    padding: 80px 20px;
   }
-  .nav-menu {
-    gap: 0;
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .quote-box {
+    font-size: 22px;
   }
 }
