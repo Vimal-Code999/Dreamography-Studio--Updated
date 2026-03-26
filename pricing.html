@@ -1,120 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pricing | Dreamography Studio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Cursive font for quotes -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-mQV+9fT3KjYWI1c6KChpOWOAIeycmTSDb03bnw6/zwZ7JpX3pfKkMojzjleRm9VdXiafX7+7A2ye31E2vChCCw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-      WEBSITE UPDATE IN PROGRESS, MORE GALLERIES UPLOADING SOON! UNTIL THEN
-      PLEASE FILL OUT OUR CONTACT FORM TO SEE FULL WEDDING GALLERIES
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Dreamography Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="container">
-        <a href="index.html" class="logo">Dreamography<span class="accent">Studio</span></a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
-        </label>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html" class="active">Pricing</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+  <div class="top-bar">
+    WEBSITE UPDATE IN PROGRESS, MORE GALLERIES UPLOADING SOON! UNTIL THEN PLEASE FILL OUT OUR CONTACT FORM TO SEE FULL WEDDING GALLERIES
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">Dreamography<span>Studio</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-banner">
+    <h1>Pricing</h1>
+    <p>
+      Simple and flexible packages designed around your memories, your style, and your special moments.
+    </p>
+  </section>
+
+  <section class="section section-light">
+    <div class="pricing-grid">
+      <div class="card">
+        <h3>Portrait Session</h3>
+        <div class="price">Starting at $99</div>
+        <ul class="price-list">
+          <li>Up to 1 hour session</li>
+          <li>15 professionally edited images</li>
+          <li>Private online gallery</li>
+          <li>Light retouching included</li>
+          <li>Perfect for solo, couple, or casual portraits</li>
         </ul>
       </div>
-    </nav>
 
-    <header class="page-header">
-      <div class="container">
-        <h1>Pricing</h1>
-        <p>Transparent packages designed to suit your needs.</p>
+      <div class="card">
+        <h3>Event Coverage</h3>
+        <div class="price">Starting at $80/hour</div>
+        <ul class="price-list">
+          <li>Minimum 2-hour booking</li>
+          <li>Professionally edited high-resolution images</li>
+          <li>Coverage of key moments and candid details</li>
+          <li>Online gallery delivery</li>
+          <li>Ideal for birthdays, parties, and private events</li>
+        </ul>
       </div>
-    </header>
 
-    <section class="pricing-section">
-      <div class="container">
-        <div class="pricing-cards">
-          <div class="pricing-card">
-            <h3>Portrait Session</h3>
-            <p class="price">Starting from <span>$99</span></p>
-            <ul>
-              <li>1 hour shoot</li>
-              <li>15 edited photos delivered digitally</li>
-              <li>Light retouching included</li>
-              <li>Online gallery for downloads</li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary">Book Now</a>
-          </div>
-          <div class="pricing-card">
-            <h3>Event Coverage</h3>
-            <p class="price">$80 <span>/ hour</span></p>
-            <ul>
-              <li>Minimum 2 hours</li>
-              <li>All high-resolution photos</li>
-              <li>30 edited highlights</li>
-              <li>Quick turnaround</li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary">Book Now</a>
-          </div>
-          <div class="pricing-card">
-            <h3>Wedding Packages</h3>
-            <p class="price">Starting from <span>$599</span></p>
-            <ul>
-              <li>4+ hours coverage</li>
-              <li>Pre-wedding consultation</li>
-              <li>200+ edited photos</li>
-              <li>Customizable add-ons</li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary">Book Now</a>
-          </div>
-        </div>
+      <div class="card">
+        <h3>Wedding Collection</h3>
+        <div class="price">Starting at $599</div>
+        <ul class="price-list">
+          <li>Half-day or customized coverage</li>
+          <li>Pre-event consultation</li>
+          <li>Professionally edited online gallery</li>
+          <li>200+ final images</li>
+          <li>Add-ons available for extra hours, engagement sessions, and videography</li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-content">
-        <p>&copy; 2026 Dreamography Studio. All rights reserved.</p>
-        <div class="socials">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener"
-            aria-label="Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="tel:+1234567890" aria-label="Phone"
-            ><i class="fas fa-phone"></i
-          ></a>
-          <a href="mailto:info@dreamographystudio.com" aria-label="Email"
-            ><i class="fas fa-envelope"></i
-          ></a>
-        </div>
-      </div>
-    </footer>
-  </body>
+  <section class="section section-soft">
+    <h2 class="section-title">Optional Add-Ons</h2>
+    <div class="features-grid">
+      <div class="card feature-card"><h3>Extra Coverage Hours</h3><p>Extend your session or event coverage as needed.</p></div>
+      <div class="card feature-card"><h3>Engagement Session</h3><p>Add a beautiful pre-wedding or couple session.</p></div>
+      <div class="card feature-card"><h3>Highlight Video</h3><p>A cinematic video that captures the feeling of your day.</p></div>
+      <div class="card feature-card"><h3>Social Media Reels</h3><p>Short edited clips perfect for sharing online.</p></div>
+      <div class="card feature-card"><h3>Rush Delivery</h3><p>Receive your edited gallery faster when needed.</p></div>
+      <div class="card feature-card"><h3>Custom Photo Album</h3><p>Turn your favorite images into a keepsake album.</p></div>
+    </div>
+
+    <p class="section-subtitle" style="margin-top: 35px;">
+      Final pricing may vary depending on location, event size, hours of coverage, and custom requests.
+    </p>
+  </section>
+
+  <section class="cta-section">
+    <h2>Need a Custom Package?</h2>
+    <p>
+      We’re happy to create a package that fits your event, vision, and coverage needs.
+    </p>
+    <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Dreamography Studio. All rights reserved.</p>
+    <p class="small-note">
+      Wedding, portrait, and event photography with a timeless storytelling style across Ontario.
+    </p>
+  </footer>
+
+</body>
 </html>
