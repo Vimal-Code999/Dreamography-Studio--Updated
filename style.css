@@ -73,7 +73,8 @@ a {
   color: #d4a017;
 }
 
-.hero {
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1606800052052-a08af7148866") center/cover no-repeat;
   height: 88vh;
   background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.5)),
     url("portrait.jpg") center/cover no-repeat;
