@@ -1,0 +1,620 @@
+/*
+ * Dreamography Studio Website Styles
+ *
+ * This stylesheet defines the core look and feel for the Dreamography Studio
+ * website. It combines a modern, minimal aesthetic with luxurious touches
+ * like gold accents and clean typography. The design is responsive and
+ * mobile-friendly.
+ */
+
+/* Global resets and base typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navbar */
+/*
+ * Navbar styling has been updated to mirror the clean, airy aesthetic of our
+ * inspiration website (Vision Infinie).  The bar is now white with dark
+ * typography and a subtle shadow.  This makes the site feel less heavy
+ * while still allowing the gold accents to stand out.  The navigation
+ * remains sticky to the top of the viewport so users can access other pages
+ * at any time.
+ */
+.navbar {
+  background-color: #fff;
+  color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.accent {
+  color: #d4af37;
+}
+
+/* Nav menu */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Navigation links: dark by default, gold on hover/active to match the
+ * overall aesthetic.  Active link states remain highlighted for context.
+ */
+.nav-menu li a {
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #d4af37;
+}
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  background: #333;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+
+.nav-toggle-label span {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.nav-toggle-label span::before {
+  content: '';
+  top: -10px;
+}
+
+.nav-toggle-label span::after {
+  content: '';
+  top: 10px;
+}
+
+/* Transform hamburger to X when checked */
+.nav-toggle:checked + .nav-toggle-label span {
+  background: transparent;
+}
+
+.nav-toggle:checked + .nav-toggle-label span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.nav-toggle:checked + .nav-toggle-label span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .nav-toggle-label {
+    display: block;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  .nav-menu li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .nav-toggle:checked ~ .nav-menu {
+    max-height: 300px;
+  }
+
+/* Announcement bar displayed above the navigation.  Inspired by our friend's
+ * site, this bar is light grey with a muted font.  It can be used to
+ * communicate updates or important notices to visitors.  The small font
+ * size keeps it unobtrusive while still being readable.
+ */
+.announcement-bar {
+  background-color: #f5f5f5;
+  color: #555;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+}
+
+/* Hero Section */
+.hero {
+  /* Updated hero background to a striking black‑and‑white photo of a couple under sparklers from Pexels.
+     This remote image gives the homepage an elegant, cinematic feel that aligns with the brand’s premium look. */
+  background: url('https://images.pexels.com/photos/1646730/pexels-photo-1646730.jpeg') center/cover no-repeat;
+  min-height: 80vh;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Slightly lighter overlay to allow more of the background image to show
+   * through.  This echoes the airy feel of our inspiration site. */
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary {
+  background-color: #d4af37;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #b59029;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #d4af37;
+}
+
+.btn-secondary:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+/* Services Section */
+.services {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  flex-grow: 1;
+  margin: 0 1rem 1rem;
+  font-size: 0.9rem;
+}
+
+.card .btn {
+  margin: 0 1rem 1.5rem;
+  align-self: flex-start;
+}
+
+/* Call to Action */
+.cta {
+  background-color: #d4af37;
+  color: #000;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+/* Quote Section
+ * Inspired by the Vision Infinie website, this section features a large
+ * quotation in a cursive script with plenty of whitespace.  It serves as
+ * a pause between major sections and reinforces the artistry of
+ * photography.  The font is loaded via Google Fonts (Caveat) in the
+ * HTML documents.
+ */
+.quote-section {
+  padding: 3rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.quote-section blockquote {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.quote-section cite {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  font-style: normal;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer .socials a {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer .socials a:hover {
+  color: #d4af37;
+}
+
+/* Page Headers */
+.page-header {
+  background-color: #f9f9f9;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Gallery Sections */
+.gallery-section {
+  padding: 3rem 0;
+}
+
+.gallery-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Pricing Section */
+.pricing-section {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.pricing-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+.pricing-card .price span {
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+.pricing-card ul {
+  text-align: left;
+  margin: 1rem 0 2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.pricing-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.about-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.contact-info ul li {
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.contact-info i {
+  color: #d4af37;
+  margin-right: 0.5rem;
+}
+
+.contact-form-wrapper {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.note {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .pricing-card {
+    padding: 1.5rem;
+  }
+  .pricing-card .price {
+    font-size: 1.8rem;
+  }
+  .about-content {
+    flex-direction: column;
+  }
+  .about-image,
+  .about-text {
+    width: 100%;
+  }
+  .contact-content {
+    flex-direction: column;
+  }
+  .nav-menu {
+    gap: 0;
+  }
+}
